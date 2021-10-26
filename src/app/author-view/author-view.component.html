@@ -1,0 +1,7 @@
+<div *ngIf="author">
+    <p>Name: {{author.name}}</p>
+    <p>Id: {{author.id}}</p>
+    <p>Price: {{author.price}}</p>
+    <p>Address: {{author.address}}</p>
+    <a [routerLink]="['/author-add', author.id]">Edit</a>
+  </div>

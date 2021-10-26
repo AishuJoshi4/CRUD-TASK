@@ -1,0 +1,24 @@
+ <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Author Name</th>
+        <th scope="col">Author ID</th>
+        <th scope="col">Price</th>
+        <th scope="col">Author Address</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let author of authorList">
+      <tr>
+        <td>{{author?.name}}</td>
+        <td>{{author?.id}}</td>
+        <td>{{author?.price}}</td>
+        <td>{{author?.address}}</td>
+        <td>
+            <button [routerLink]="['/author',author.id]">Edit</button>
+            <button [routerLink]="['/author',author.id]">View</button>
+            <button (click)="deleteAuthor(author.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
